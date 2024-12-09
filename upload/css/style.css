@@ -1,0 +1,488 @@
+body {
+  /*background,color,fontfamily,font size is changed*/
+  background: #0d0d0d;
+  color: #e5e5e5;
+  font-family: "roboto-condensed", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* added styling for the welcome message */
+#welcome-message {
+  text-align: center;
+  background-color: #1c1c1c;
+  color: #ff0000;
+  padding: 20px;
+  font-size: 22px;
+  font-family: "Arial", sans-serif;
+  border: 2px solid #ff4d4d;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll-message 10s linear infinite;
+}
+
+@keyframes scroll-message {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@font-face {
+  font-family: "latoregular";
+  src: url("../fonts/lato-regular-webfont.eot");
+  src: url("../fonts/lato-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/lato-regular-webfont.woff") format("woff"),
+    url("../fonts/lato-regular-webfont.ttf") format("truetype"),
+    url("../fonts/lato-regular-webfont.svg#latoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /* font-family: "nixie_oneregular"; */
+  font-family: "roboto-condensed";
+  /* src: url("../fonts/nixieone-regular-webfont.eot");
+  src: url("../fonts/nixieone-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/nixieone-regular-webfont.woff") format("woff"),
+    url("../fonts/nixieone-regular-webfont.ttf") format("truetype"),
+    url("../fonts/nixieone-regular-webfont.svg#nixie_oneregular") format("svg"); */
+  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-weight: normal;
+  font-style: normal;
+}
+a {
+  outline: none;
+}
+img {
+  border: none;
+}
+p {
+  line-height: 30px;
+  margin: 0;
+}
+p a {
+  color: #315f52;
+}
+p a:hover {
+  color: #451374;
+}
+#header {
+  margin: 0 auto;
+  max-width: 960px;
+  /*editing*/
+  background-color: #1c1c1c; /* Dark gray */
+  padding: 20px 0;
+}
+#header h1 {
+  font-size: 60px;
+  /* font-weight: normal; */
+  /* line-height: 50px; */
+  /* margin: 0; */
+  /* padding: 30px 0; */
+  color: #ff0000;
+  text-align: center;
+}
+#header h1 a {
+  /* changing color for boldness */
+  color: #ff0000;
+  text-decoration: none;
+}
+#header h1 a span {
+  color: #b3b3b3;
+  display: block;
+  font-family: "nixie_oneregular";
+  font-size: 26px;
+  text-transform: uppercase;
+}
+#header ul#navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#header ul#navigation li {
+  display: inline;
+  line-height: 30px;
+  position: relative;
+}
+#header ul#navigation li a {
+  color: #e5e5e5;
+  font-size: 18px;
+  padding: 0 30px;
+  /* text-align: center; */
+  /* text-decoration: none; */
+  text-transform: uppercase;
+}
+#header ul#navigation li a:hover,
+#header ul#navigation li.current ul li a:hover {
+  color: #ff4d4d; /*neon red for hover*/
+}
+#header ul#navigation li.current a {
+  color: #99fa99;
+}
+#header ul#navigation li ul {
+  display: none;
+  left: 0;
+  list-style: none outside none;
+  margin: 0;
+  padding: 11px 0 0;
+  position: absolute;
+  top: 12px;
+}
+#header ul#navigation li:hover ul {
+  display: block;
+}
+#header ul#navigation li ul li {
+  background: #077054;
+  display: block;
+  height: 46px;
+  line-height: 46px;
+}
+#header ul#navigation li ul li a {
+  padding: 0 20px;
+}
+#header ul#navigation li.current ul li a {
+  color: #b6d8cf;
+}
+#body {
+  font-family: "roboto-condensed", sans-serif; /*changed the font to a bold one */
+  background: #1c1c1c;
+  margin: 1px auto 0;
+  max-width: 880px;
+  min-height: 827px;
+  overflow: hidden;
+  padding: 45px 40px 46px;
+}
+#body > h2 {
+  color: #21a51e;
+  font-family: "nixie_oneregular";
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 30px;
+  margin: 0;
+  padding: 0 0 44px;
+}
+#body img.figure {
+  display: block;
+  float: right;
+  margin: 74px 38px 46px 0;
+  max-width: 100%;
+  width: auto;
+}
+#body div#tagline {
+  float: left;
+  margin: 110px 0 0 25px;
+  max-width: 510px;
+}
+#body div#tagline h1 {
+  background: url(../images/bg-separator.png) no-repeat center bottom;
+  color: #00ff00;
+  font-family: "Roboto", sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  /* line-height: 100px; */
+  /* margin: 0; */
+  /* padding: 0 0 55px; */
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+#body div#tagline p {
+  color: #e5e5e5;
+  font-family: "nixie_oneregular";
+  font-size: 20px;
+  /* line-height: 100px; */
+  /* padding: 43px 0 0; */
+  margin: 10px 0;
+  text-align: center;
+}
+#body div.content {
+  overflow: hidden;
+}
+#body div.content > div {
+  float: left;
+  width: 510px;
+}
+#body div.content h3,
+#body form h3,
+#body ul.blog li h3 {
+  font-family: "nixie_oneregular";
+  font-size: 23px;
+  font-weight: normal;
+  line-height: 30px;
+  margin: 0;
+  padding: 25px 0 0;
+}
+#body div.content h3:first-child,
+#body div.content div div.section:first-child {
+  padding: 0;
+}
+#body div.content img.figure {
+  margin: 0 38px 46px 0;
+}
+#body div.content div div.section {
+  padding: 55px 0 0;
+  width: 430px;
+}
+#body div.content div div.section span {
+  display: block;
+  line-height: 30px;
+}
+#body div.content div ul {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 0 65px;
+}
+#body div.content div ul li {
+  float: left;
+  margin: 0 0 0 83px;
+  width: 207px;
+}
+#body div.content div ul li:first-child {
+  margin: 0;
+}
+#body div.content div ul li img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+}
+#body div.content div ul li h4 {
+  font-family: "nixie_oneregular";
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  padding: 12px 0 0;
+  text-align: center;
+}
+#body form {
+  margin: 25px auto 0;
+  overflow: hidden;
+  width: 460px;
+  color: #ffffff;
+}
+#body form label {
+  display: block;
+  padding: 15px 0 0;
+}
+#body form label span {
+  display: block;
+  line-height: 27px;
+  padding: 0 0 5px;
+  color: #ffffff;
+}
+#body form label input {
+  background: #d1d3d4;
+  border: 1px solid #ffffff;
+  color: #315f52;
+  display: block;
+  font-family: "latoregular";
+  font-size: 14px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 5px;
+  width: 448px;
+}
+#body form label textarea {
+  background: #d1d3d4;
+  border: 1px solid #ffffff;
+  color: #315f52;
+  display: block;
+  font-family: "latoregular";
+  font-size: 14px;
+  height: 250px;
+  line-height: 30px;
+  overflow: auto;
+  padding: 0 5px;
+  resize: none;
+  width: 448px;
+}
+#body form input#send {
+  background: #ff0000;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "latoregular";
+  font-size: 16px;
+  float: right;
+  height: 40px;
+  margin: 8px 0 0;
+  width: 100px;
+  text-transform: uppercase;
+  box-shadow: 0 3px 5px rgba(255, 0, 0, 0.3);
+}
+#body form input#send:hover {
+  /* changed hover to a bold color */
+  background: #00ff00;
+  color: #0d0d0d;
+}
+#body ul.blog {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#body ul.blog li {
+  border-top: 1px solid #333333; /* Subtle separator */
+  padding: 30px 0;
+}
+#body ul.blog li:first-child {
+  padding: 0 100px 0 0;
+}
+#body ul.blog li img {
+  display: block;
+  float: left;
+  margin: 0 20px 0 0;
+  max-width: 100%;
+  width: auto;
+}
+#body ul.blog li h3 {
+  line-height: 20px;
+  padding: 0 0 8px;
+}
+#body ul.blog li h3 a,
+#body div.content div.sidebar ul li h4 a {
+  color: white;
+  text-decoration: none;
+}
+#body ul.blog li h3 a:hover,
+#body div.content div.sidebar ul li h4 a:hover {
+  text-decoration: underline;
+}
+/* Sidebar */
+#body div.content div.sidebar {
+  background: #1c1c1c; /* Dark gray background */
+  color: #e5e5e5;
+  padding: 20px;
+  border-radius: 5px;
+}
+#body ul.blog li span,
+#body div.content div.article span,
+#body div.content div.sidebar ul li span {
+  color: #1e6907;
+  display: block;
+  line-height: 30px;
+}
+#body ul.blog li p {
+  color: #b3b3b3;
+}
+#body div.content div.article {
+  width: 570px;
+}
+#body div.content div.article img {
+  display: block;
+  margin: 0 0 9px;
+  max-width: 100%;
+  width: auto;
+}
+#body div.content div.article p {
+  color: #ffffff;
+  padding: 0 0 30px;
+}
+#body div.content div.sidebar {
+  float: left;
+  margin: 0 0 0 50px;
+  width: 259px;
+}
+#body div.content div.sidebar ul {
+  padding: 20px 0 0;
+}
+#body div.content div.sidebar ul li {
+  border-top: 1px solid #88b4a8;
+  float: none;
+  margin: 0;
+  padding: 18px 0 28px;
+  width: auto;
+}
+#body div.content div.sidebar ul li:first-child {
+  border: none;
+  padding: 0 0 28px;
+}
+#body div.content div.sidebar ul li h4 {
+  line-height: 30px;
+  text-align: left;
+}
+#footer {
+  margin: 0 auto;
+  max-width: 960px;
+  overflow: hidden;
+  padding: 30px 0 60px;
+}
+#footer div {
+  float: left;
+  width: 500px;
+}
+#footer div span {
+  color: #99fa99;
+  display: block;
+  font-size: 26px;
+  line-height: 24px;
+}
+#footer div p {
+  color: #b6d8cf;
+  font-size: 12px;
+  line-height: 30px;
+}
+#footer div#connect {
+  float: right;
+  overflow: hidden;
+  width: auto;
+}
+#footer div#connect a {
+  background: url(../images/icons.png) no-repeat;
+  display: block;
+  float: left;
+  text-indent: -99999px;
+  filter: brightness(0) invert(1); /*icons are made white*/
+}
+/*added hover on icons*/
+#footer div#connect a:hover {
+  filter: hue-rotate(90deg);
+}
+#footer div#connect a#facebook {
+  background-position: 0 0;
+  height: 30px;
+  width: 16px;
+}
+#footer div#connect a#twitter {
+  background-position: 0 -30px;
+  height: 30px;
+  margin: 0 0 0 28px;
+  width: 37px;
+}
+#footer div#connect a#googleplus {
+  background-position: 0 -61px;
+  height: 32px;
+  margin: 0 0 0 19px;
+  width: 32px;
+}
+#footer div#connect a#googleplus {
+  background-position: 0 -61px;
+  height: 32px;
+  margin: 0 0 0 19px;
+  width: 32px;
+}
+#footer div#connect a#pinterest {
+  background-position: 0 -94px;
+  height: 30px;
+  margin: 0 0 0 23px;
+  width: 30px;
+}
+/* added my id and name in the footer */
+#footer p:last-child {
+  font-size: 14px; /* Slightly smaller text */
+  color: #e5e5e5; /* Gray color */
+  margin-top: 10px; /* Space above the ID/Name line */
+  text-align: center; /* Center-align text */
+}
